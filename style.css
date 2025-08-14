@@ -1,0 +1,185 @@
+/* Reset sederhana */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #004aad;
+  color: white;
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url('smk.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero .btn {
+  background: #ffcc00;
+  padding: 10px 20px;
+  margin-top: 20px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Content Sections */
+.content {
+  padding: 40px 0;
+  background-color: white;
+}
+
+.content.gray {
+  background-color: #eaeaea;
+}
+
+.content h3 {
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Tombol Back to Top */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  opacity: 0; /* awalnya transparan */
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.3s ease;
+  animation: bounce 1.2s infinite; /* animasi panah goyang */
+}
+
+#backToTop.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+#backToTop:hover {
+  background-color: #003080;
+  transform: scale(1.1);
+}
+
+/* Animasi goyang panah */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Tombol Toggle Tema */
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.2);
+}
+
+/* Tema Gelap */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background: #1f1f1f;
+}
+
+.dark-mode nav ul li a {
+  color: #e0e0e0;
+}
+
+.dark-mode .content {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .content.gray {
+  background-color: #2a2a2a;
+}
+
+.dark-mode footer {
+  background: #1f1f1f;
+  color: #bbb;
+}
+
+.pengumuman {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.pengumuman marquee {
+  font-family: sans-serif;
+}
